@@ -1,0 +1,226 @@
+@import "variables";
+
+.container {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: $main_font;
+    background-color: $background_color;
+}
+
+.gallery_header {
+    opacity: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(28, 28, 28);
+    padding: 0 6rem;
+    height: 120px;
+    z-index: 5;
+    box-shadow: 0 10px 30px -10px rgba(28, 28, 28, 0.25);
+    animation: slideDown .4s ease-out forwards;
+
+    h1 {
+        color: #fff;
+        letter-spacing: 10px;
+        font-weight: 100;
+        font-size: $desktop_title;
+    }
+
+    button {
+        color: #fff;
+        cursor: pointer;
+        outline: none;
+        background: transparent;
+        font-size: $desktop_button_text;
+        border: 1px solid $red;
+        font-weight: 100;
+        padding: 1rem 2rem;
+        letter-spacing: 2.5px;
+        text-transform: uppercase;
+        transition: all .1s ease;
+
+        &:hover {
+            background-color: $red;
+        }
+    }
+}
+
+.images {
+    margin-top: 120px;
+    display: grid;
+    padding: 3.5rem 7rem 6rem 6rem;
+    grid-gap: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+    grid-auto-rows: 35vh;
+    grid-auto-flow: dense;
+
+    picture {
+        opacity: 0;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all .2s ease;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &:hover {
+            transform: scale(1.012);
+        }
+    }
+
+    .wide {
+        grid-row: span 2;
+        animation: fadeIn .5s ease-out .4s forwards;
+    }
+
+    .tall {
+        grid-column: span 1;
+        animation: fadeIn .5s ease-out .75s forwards;
+    }
+}
+
+.scroll_arrow {
+    opacity: 0;
+    cursor: pointer;
+    position: fixed;
+    right: 0rem;
+    bottom: 7.5rem;
+    padding: 0 2.5rem;
+    animation: fadeIn .5s ease-out 1.5s forwards;
+
+    .arrow {
+        display: grid;
+        place-items: center;
+        position: relative;
+        height: 150px;
+        width: 2px;
+        background-color: $black;
+
+        svg {
+            width: $desktop_button_text;
+            position: absolute;
+            top: 0;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    .images {
+        margin-top: 100px;
+        grid-gap: 2.25rem;
+        grid-template-columns: repeat(auto-fit, minmax(27.5vw, 1fr));
+        grid-auto-rows: 30vh;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gallery_header {
+        padding: 0 4rem;
+        height: 100px;
+
+        h1 {
+            font-size: $tablet_title;
+        }
+
+        button {
+            font-size: $tablet_button_text;
+            padding: .75rem 1.75rem;
+        }
+    }
+
+    .images {
+        min-height: 100vh;
+        margin-top: 100px;
+        grid-gap: 2.25rem;
+        padding: 3.5rem 4rem 4rem 4rem;
+        grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
+        grid-auto-rows: 15vh;
+    }
+
+    .scroll_arrow {
+        bottom: 5rem;
+        padding: 0 1.5rem;
+    }
+}
+
+@media (max-width: 1200px) and (max-height: 900px) {
+    .images {
+        grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+        grid-auto-rows: 30vh;
+    }
+}
+
+@media (max-width: 769px) {
+    .gallery_header {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1.25rem 2rem 1.75rem;
+        height: auto;
+
+        h1 {
+            font-size: $mobile_title;
+            letter-spacing: 10px;
+            position: relative;
+            font-weight: 500;
+            right: -5px;
+        }
+
+        button {
+            font-size: 8px;
+            padding: .45rem .2rem;
+            border-width: 0 0 1px 0;
+            margin-bottom: 1.5rem;
+
+            &:hover {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .scroll_arrow {
+        display: none;
+    }
+
+    .images {
+        margin-top: 80px;
+        grid-gap: .5rem;
+        padding: 3.5rem 1rem 1rem 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(35vw, 1fr));
+        grid-auto-rows: 15vh;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
