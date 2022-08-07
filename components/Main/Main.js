@@ -6,7 +6,7 @@ import SideImage from './SideImage'
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0
+  threshold: 0.05
 }
 
 const imageAnimation = 'fadeIn .4s  ease-out .4s forwards'
