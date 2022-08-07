@@ -6,16 +6,16 @@ import SideImage from './SideImage'
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.1
+  threshold: 0
 }
 
-const imageAnimation = 'fadeIn .4s  ease-out .15s forwards'
-const titleAnimation = 'slideRight .4s ease-out .7s forwards'
-const textAnimation = 'slideRight .4s ease-out 1s forwards'
-const button1Animation = 'slideRight .4s ease-out 1.25s forwards'
-const button2Animation = 'slideRight .4s ease-out 1.5s forwards'
-const arrowAnimation = 'fadeIn 1s linear 1.75s forwards'
-const headerAnimation = 'slideDown .5s ease-out .35s forwards'
+const imageAnimation = 'fadeIn .4s  ease-out .4s forwards'
+const titleAnimation = 'slideRight .3s ease-out .7s forwards'
+const textAnimation = 'slideRight .3s ease-out .9s forwards'
+const button1Animation = 'slideRight .3s ease-out 1.1s forwards'
+const button2Animation = 'slideRight .3s ease-out 1.3s forwards'
+const arrowAnimation = 'fadeIn .75s linear 1.5s forwards'
+const headerAnimation = 'slideDown .5s ease-out .25s forwards'
 
 const Main = ({ goToGalleries, goToContacts }) => {
   const [isVisible, setIsVisible] = useState(false);

@@ -10,10 +10,10 @@ import useMediaQuery from "../../utils/useMediaQuery"
 const observerOptions = {
   root: null,
   rootMargin: "0px",
-  threshold: 0.1
+  threshold: 0
 }
 
-const galleryAnimation = 'scale .55s ease-out forwards'
+const galleryAnimation = 'scale .35s ease-out forwards'
 
 const Gallery = ({ name, images }) => {
   const [isVisible, setIsVisible] = useState(false);

@@ -9,7 +9,7 @@ import useMediaQuery from "../../utils/useMediaQuery"
 const observerOptions = {
     root: null,
     rootMargin: "0px",
-    threshold: 0.1
+    threshold: 0
 }
 
 const imageAnimation = 'fadeIn .4s  ease-out .25s forwards'

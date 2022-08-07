@@ -73,6 +73,7 @@
             font-weight: 600;
             line-height: 30px;
             padding: 2rem 4px;
+            color: $black;
             // animation: slideRight .4s ease-out 1.25s forwards;
 
             span{
@@ -99,6 +100,7 @@
                 letter-spacing: 2.5px;
                 border: 2px solid $red;
                 transition: all .15s ease;
+                color: $black;
                 // animation: slideRight .4s ease-out 1.75s forwards;
 
                 &:hover {

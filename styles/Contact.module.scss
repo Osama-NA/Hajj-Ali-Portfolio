@@ -137,6 +137,7 @@
                 font-size: $desktop_text;
                 margin-bottom: 1.25rem;
                 letter-spacing: 2.5px;
+                border-radius: 0;
 
                 &::placeholder {
                     color: $black;
@@ -543,7 +544,8 @@
 
             svg {
                 width: $mobile_button_text;
-                top: -5px;
+                top: -7px;
+                left: 34%;
             }
         }
     }
