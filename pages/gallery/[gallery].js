@@ -10,10 +10,6 @@ import ScrollArrow from '../../components/Gallery/ScrollArrow'
 import Images from '../../components/Gallery/Images'
 import Header from '../../components/Gallery/Header'
 
-export const config = {
-    unstable_runtimeJS: false
-}
-
 const Gallery = () => {
     const router = useRouter();
 
