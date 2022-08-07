@@ -4,6 +4,7 @@ import ContactForm from './ContactForm'
 import styles from '../../styles/Contact.module.scss'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBackward } from '@fortawesome/free-solid-svg-icons'
+import useMediaQuery from "../../utils/useMediaQuery"
 
 const observerOptions = {
     root: null,
@@ -13,20 +14,36 @@ const observerOptions = {
 
 const imageAnimation = 'fadeIn .4s  ease-out .25s forwards'
 const title1Animation = 'fadeIn .4s  ease-out .5s forwards'
-const textAnimation = 'fadeIn .4s  ease-out .75s forwards'
-const link1Animation = 'slideUp .25s  ease-out 1s forwards'
-const link2Animation = 'slideUp .25s  ease-out 1.15s forwards'
-const link3Animation = 'slideUp .25s  ease-out 1.3s forwards'
-const link4Animation = 'slideUp .25s  ease-out 1.45s forwards'
-const title2Animation = 'fadeIn .4s  ease-out 1.6s forwards'
-const input1Animation = 'fadeIn .4s  ease-out 1.85s forwards'
-const input2Animation = 'fadeIn .4s  ease-out 2.05s forwards'
-const textareaAnimation = 'fadeIn .4s  ease-out 2.25s forwards'
-const buttonAnimation = 'slideUp .4s  ease-out 2.5s forwards'
-const arrowAnimation = 'fadeIn 1s  ease-out 2.75s forwards'
+const textAnimation = 'fadeIn .4s  ease-out .5s forwards'
+const link1Animation = 'slideUp .25s  ease-out .75s forwards'
+const link2Animation = 'slideUp .25s  ease-out .9s forwards'
+const link3Animation = 'slideUp .25s  ease-out 1.05s forwards'
+const link4Animation = 'slideUp .25s  ease-out 1.25s forwards'
+const title2Animation = 'fadeIn .4s  ease-out 1.4s forwards'
+const input1Animation = 'fadeIn .4s  ease-out 1.65s forwards'
+const input2Animation = 'fadeIn .4s  ease-out 1.65s forwards'
+const textareaAnimation = 'fadeIn .4s  ease-out 1.65s forwards'
+const buttonAnimation = 'slideUp .4s  ease-out 1.8s forwards'
+const arrowAnimation = 'fadeIn 1s  ease-out 2.05s forwards'
+
+const title2MobileAnimation = 'fadeIn .4s  ease-out .0s forwards'
+const input1MobileAnimation = 'fadeIn .4s  ease-out .25s forwards'
+const input2MobileAnimation = 'fadeIn .4s  ease-out .25s forwards'
+const textareaMobileAnimation = 'fadeIn .4s  ease-out .25s forwards'
+const buttonMobileAnimation = 'slideUp .4s  ease-out .5s forwards'
+const imageMobileAnimation = 'fadeIn .4s  ease-out .75s forwards'
+const title1MobileAnimation = 'fadeIn .4s  ease-out .9s forwards'
+const textMobileAnimation = 'fadeIn .4s  ease-out 1.05s forwards'
+const link1MobileAnimation = 'slideUp .25s  ease-out  1.2s forwards'
+const link2MobileAnimation = 'slideUp .25s  ease-out 1.3s forwards'
+const link3MobileAnimation = 'slideUp .25s  ease-out 1.4s forwards'
+const link4MobileAnimation = 'slideUp .25s  ease-out 1.5s forwards'
+const arrowMobileAnimation = 'fadeIn 1s  ease-out 1.75s forwards'
 
 const Contact = ({ contactsRef }) => {
     const [isVisible, setIsVisible] = useState(false);
+
+    const isMobileScreen = useMediaQuery("(max-width: 600px)")
 
     const imageRef = useRef()
     const title1Ref = useRef()
@@ -60,19 +77,35 @@ const Contact = ({ contactsRef }) => {
 
     useEffect(() => {
         if (isVisible) {
-            imageRef.current.style.animation = imageAnimation
-            title1Ref.current.style.animation = title1Animation
-            textRef.current.style.animation = textAnimation
-            title2Ref.current.style.animation = title2Animation
-            link1Ref.current.style.animation = link1Animation
-            link2Ref.current.style.animation = link2Animation
-            link3Ref.current.style.animation = link3Animation
-            link4Ref.current.style.animation = link4Animation
-            input1Ref.current.style.animation = input1Animation
-            input2Ref.current.style.animation = input2Animation
-            textareaRef.current.style.animation = textareaAnimation
-            buttonRef.current.style.animation = buttonAnimation
-            arrowRef.current.style.animation = arrowAnimation
+            if(isMobileScreen){
+                imageRef.current.style.animation = imageMobileAnimation
+                title1Ref.current.style.animation = title1MobileAnimation
+                textRef.current.style.animation = textMobileAnimation
+                title2Ref.current.style.animation = title2MobileAnimation
+                link1Ref.current.style.animation = link1MobileAnimation
+                link2Ref.current.style.animation = link2MobileAnimation
+                link3Ref.current.style.animation = link3MobileAnimation
+                link4Ref.current.style.animation = link4MobileAnimation
+                input1Ref.current.style.animation = input1MobileAnimation
+                input2Ref.current.style.animation = input2MobileAnimation
+                textareaRef.current.style.animation = textareaMobileAnimation
+                buttonRef.current.style.animation = buttonMobileAnimation
+                arrowRef.current.style.animation = arrowMobileAnimation
+            }else{
+                imageRef.current.style.animation = imageAnimation
+                title1Ref.current.style.animation = title1Animation
+                textRef.current.style.animation = textAnimation
+                title2Ref.current.style.animation = title2Animation
+                link1Ref.current.style.animation = link1Animation
+                link2Ref.current.style.animation = link2Animation
+                link3Ref.current.style.animation = link3Animation
+                link4Ref.current.style.animation = link4Animation
+                input1Ref.current.style.animation = input1Animation
+                input2Ref.current.style.animation = input2Animation
+                textareaRef.current.style.animation = textareaAnimation
+                buttonRef.current.style.animation = buttonAnimation
+                arrowRef.current.style.animation = arrowAnimation
+            }
         } else {
             imageRef.current.style.animation = 'none'
             title1Ref.current.style.animation = 'none'
@@ -88,7 +121,7 @@ const Contact = ({ contactsRef }) => {
             buttonRef.current.style.animation = 'none'
             arrowRef.current.style.animation = 'none'
         }
-    }, [isVisible])
+    }, [isMobileScreen, isVisible])
 
     return (
         <div className={styles.container} ref={contactsRef}>

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import styles from '../../styles/Main.module.scss'
-import Camera from '../../public/images/main-img.jpg'
 import useMediaQuery from "../../utils/useMediaQuery"
 
 const SideImage = ({imageRef}) => {
@@ -8,7 +7,6 @@ const SideImage = ({imageRef}) => {
 
   const isSmallScreen = useMediaQuery("(max-width: 900px)")
   const isMobileScreen = useMediaQuery("(max-width: 600px)")
-  
 
   useEffect(() => {
       if(isSmallScreen){
@@ -28,7 +26,7 @@ const SideImage = ({imageRef}) => {
     <aside 
         className={styles.side_image}
         style={{
-            background: `url('${Camera.src}')`,
+            background: `url('https://res.cloudinary.com/mohamad-hamoudii/image/upload/v1659656107/main_img-a09Hxjhs_wsw3je.jpg')`,
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPositionY: position,

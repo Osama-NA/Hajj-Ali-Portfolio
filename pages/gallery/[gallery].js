@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from '../../styles/Gallery.module.scss'
 import Meta from '../../components/Meta'
 import ViewImage from '../../components/ViewImage'
-import galleries from '../../utils/data'
+import {fullGalleries} from '../../utils/data'
 import MainFooter from '../../components/MainFooter'
 import LoadingPage from '../../components/LoadingPage'
 import ScrollArrow from '../../components/Gallery/ScrollArrow'
@@ -22,7 +22,7 @@ const Gallery = () => {
     })
 
     const handleTargetGallery = useCallback((galleryName) => {
-        let thisGallery = galleries.filter(gallery => {
+        let thisGallery = fullGalleries.filter(gallery => {
             return gallery.name === galleryName
         })[0]
 

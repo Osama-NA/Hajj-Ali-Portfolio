@@ -19,6 +19,7 @@ const Gallery = ({ name, images }) => {
   const [isVisible, setIsVisible] = useState(false);
   const [viewImage, setViewImage] = useState(false)
   const [image, setImage] = useState()
+  const [showGallery, setShowGallery] = useState(true)
   const [handledImages, setHandledImages] = useState(<></>)
   
   const containerRef = useRef()
@@ -42,15 +43,21 @@ const Gallery = ({ name, images }) => {
   }, [containerRef])
 
   useEffect(() => {
-    if (isVisible) {
-      containerRef.current.style.animation = galleryAnimation
-    } else {
-      containerRef.current.style.animation = 'none'
+    if(containerRef.current){
+      if (isVisible) {
+        containerRef.current.style.animation = galleryAnimation
+      } else {
+        containerRef.current.style.animation = 'none'
+      }
     }
   }, [isVisible])
 
   useEffect(() => {
     if (isMobileScreen) {
+      if(images.length <= 4) {
+        setShowGallery(false)
+      }
+
       setHandledImages(<Images
         images={images}
         setImage={setImage}
@@ -59,18 +66,22 @@ const Gallery = ({ name, images }) => {
       return
     }
 
-    if (images.length === 5) {
-      let desktopImages = images.filter((img, i) => i < 4 && img)
-
-      setHandledImages(<Images
-        images={desktopImages}
-        setImage={setImage}
-        setViewImage={setViewImage}
-      />)
+    
+    let desktopImages = images 
+    if (images.length >= 5) {
+      desktopImages = desktopImages.filter((img, i) =>{
+        return  i < 4 && img
+      })
     }
+    setShowGallery(true)
+    setHandledImages(<Images
+      images={desktopImages}
+      setImage={setImage}
+      setViewImage={setViewImage}
+    />)
   }, [image, images, isMobileScreen])
 
-  return (
+  return showGallery && (
     <>
       <section className={styles.gallery} ref={containerRef}>
         <Header galleryName={name} />

@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import styles from '../../styles/Contact.module.scss'
-import peronalImage from '../../public/images/mhmd.JPG'
 import useMediaQuery from "../../utils/useMediaQuery"
 import Socials from "./Socials"
 
@@ -26,7 +25,7 @@ const ContactInfo = ({
                 <div
                     className={styles.image}
                     style={{
-                        background: `url('${peronalImage.src}')`,
+                        background: `url('https://res.cloudinary.com/mohamad-hamoudii/image/upload/v1659656104/mhmd-XR9Hxjhs_chtwyr.jpg')`,
                         backgroundSize: 'cover',
                         backgroundPositionY: -30,
                         backgroundRepeat: 'no-repeat'

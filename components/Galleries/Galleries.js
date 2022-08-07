@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Galleries.module.scss'
 import Gallery from './Gallery'
-import galleries from '../../utils/data'
+import {homeGalleries} from '../../utils/data'
 
 const Galleries = ({galleriesRef}) => {
   return (
@@ -12,7 +12,7 @@ const Galleries = ({galleriesRef}) => {
 
       <main className={styles.galleries}>
         {
-          galleries.map((gallery, id) => {
+          homeGalleries.map((gallery, id) => {
             return <Gallery
               key={id}
               name={gallery.name}

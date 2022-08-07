@@ -12,7 +12,7 @@ const Images = ({gallery, setViewImage, setImage}) => {
                         name={id % 2 !== 0 ? styles.tall : styles.wide}
                         setViewImage={setViewImage}
                         setImage={setImage}
-                        img={img.image}
+                        img={img}
                     />
                 })
             }
