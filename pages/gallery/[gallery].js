@@ -3,12 +3,16 @@ import { useRouter } from "next/router";
 import styles from '../../styles/Gallery.module.scss'
 import Meta from '../../components/Meta'
 import ViewImage from '../../components/ViewImage'
-import {fullGalleries} from '../../utils/data'
+import { fullGalleries } from '../../utils/data'
 import MainFooter from '../../components/MainFooter'
 import LoadingPage from '../../components/LoadingPage'
 import ScrollArrow from '../../components/Gallery/ScrollArrow'
 import Images from '../../components/Gallery/Images'
 import Header from '../../components/Gallery/Header'
+
+export const config = {
+    unstable_runtimeJS: false
+}
 
 const Gallery = () => {
     const router = useRouter();
@@ -60,7 +64,7 @@ const Gallery = () => {
                     gallery={gallery}
                 />
 
-                <ScrollArrow  />
+                <ScrollArrow />
 
                 <MainFooter maxWidth='100vw' />
 

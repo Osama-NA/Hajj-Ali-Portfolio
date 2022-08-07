@@ -8,6 +8,10 @@ import LoadingPage from '../components/LoadingPage'
 import MainFooter from '../components/MainFooter'
 import { useRouter } from 'next/router'
 
+export const config = {
+  unstable_runtimeJS: false
+}
+
 const Home = () => {          
   const [loading, setLoading] = useState(true)
 
