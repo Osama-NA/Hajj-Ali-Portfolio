@@ -183,6 +183,7 @@ export const fullGalleries = [
             'https://res.cloudinary.com/osama-na/image/upload/v1659796830/3L3A3646-n0ej7jhs_tvlleb.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659796827/3L3A3432-Bdej7jhs_ijvwhj.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659796825/3L3A3339_Recovered-c1Ui7jhs_mnkwb2.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667328878/3L3A3990_insta_hVDBKrhs-nzrGKrhs_qfdpmr.jpg'
         ],
     },
     {
@@ -192,6 +193,13 @@ export const fullGalleries = [
             'https://res.cloudinary.com/osama-na/image/upload/v1659797987/016Y6738-Duyk7jhs_dzdnye.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659797986/016Y6566-4h0k7jhs_khmpaf.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659797984/016Y6544-c7zk7jhs_j0miaa.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667328999/2nd_gPOBKrhs-qLtGKrhs_l7uohv.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329006/nw1_yPeCKrhs-vMvGKrhs_pf2eur.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329016/6I6A3082_EkXBKrhs-WCtGKrhs_xscgkm.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329017/6I6A2998_yWbCKrhs-xrsGKrhs_bed9pb.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329018/3rd_nUPBKrhs-cftGKrhs_uhww1x.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329019/6I6A2927_JvQBKrhs-NstGKrhs_vpjfca.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667329022/6I6A3035_cRZBKrhs-jUsGKrhs_n9crms.jpg',
         ],
     },
     {
@@ -208,7 +216,6 @@ export const fullGalleries = [
     {
         name: 'Modeling',
         images: [
-            'https://res.cloudinary.com/osama-na/image/upload/v1659798130/AO7I0092-1Qim7jhs_el379r.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659798129/AO7I0071-R3gm7jhs_rna90o.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659798128/5-7Iam7jhs_otrsjq.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659798128/AO7I0043-Wojm7jhs_wpjhyy.jpg',
@@ -218,6 +225,7 @@ export const fullGalleries = [
             'https://res.cloudinary.com/osama-na/image/upload/v1659798122/2-Xldm7jhs_enqb9e.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659798124/4-30Wl7jhs_mrslph.jpg',
             'https://res.cloudinary.com/osama-na/image/upload/v1659798124/3-WAVl7jhs_sdg31e.jpg',
+            'https://res.cloudinary.com/osama-na/image/upload/v1667328841/AO7I0092_DScCKrhs-KsuGKrhs_tfgydd.jpg'
         ],
     },
     {
