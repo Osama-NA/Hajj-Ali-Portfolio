@@ -61,7 +61,7 @@ const ContactForm = ({
     const sendEmail = async () => {
         const { name, email, message } = formData
 
-        const emaiSubmittionResponse = await fetch('https://formsubmit.co/ajax/ossama.nae12@gmail.com', {
+        const emaiSubmittionResponse = await fetch('https://formsubmit.co/ajax/mohdali97@outlook.com', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
