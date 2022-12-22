@@ -6,5 +6,3 @@
 - React / Next
 - Scss
 
-### Deployement
-- Continuously integrated and deployed using [Netlify](https://www.netlify.com/)
